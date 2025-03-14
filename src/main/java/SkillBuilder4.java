@@ -8,11 +8,32 @@
  */
 
 public class SkillBuilder4 {
+    // make variables for finite states
+    Boolean S0 = false; //not T
+    Boolean S1 = false;
+    Boolean S2 = false;
+    // replace this line with your constants either true or false for the states, boolean
 
-    // replace this line with your constants
+    public static String findTYPattern(String s) {
+        boolean S0 = false;
+        String place = "";
 
-    public static String findTYPattern(String s)
-    {
-        // replace this line with your code
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == 't' || s.charAt(i) == 'T') {
+                S0 = true;
+            }
+            if (S0 == true) {
+                place += s.charAt(i);
+                if (s.charAt(1) == 'y' || s.charAt(i) == 'Y') {
+                    S0 = false;
+                }
+            }
+            if (place.contains("y") || place.contains("Y")) {
+                return place;
+            }
+        }
+        return "";
     }
 }
+
+        //find character "t" or "T" using charAt
