@@ -10,8 +10,6 @@
 public class SkillBuilder4 {
     // make variables for finite states
     Boolean S0 = false; //not T
-    Boolean S1 = false;
-    Boolean S2 = false;
     // replace this line with your constants either true or false for the states, boolean
 
     public static String findTYPattern(String s) {
